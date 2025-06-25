@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* _______________________________________________________ */
+
+.card img {
+    max-width: 100%;
+}
+
+.card .swiper-slide h1 {
+    padding: 10px 0;
+}
+
+.card .swiper-slide p {
+    padding-bottom: 30px;
+}
+
+
+#news {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0px auto;
+    position: relative;
+
+}
+
+.card {
+    height: 90%;
+    /*가운데 이미지의 높이에 따라 아래 위 패딩 조정해주세요!*/
+}
+
+
+.swiper-button-prev {
+    left: -50px;
+    right: auto;
+}
+
+.swiper-button-next {
+    right: -50px;
+    left: auto;
+}
+
+/*높이가 다른 슬라이드들을 세로 가운데가 맞게 해줌*/
+.card .swiper-wrapper {
+    align-items: center;
+}
+
+/*지금 현재 가운데 보이고 있는 슬라이드는 .swiper-slide-active 라는 클래스를 가지는데 이를 이용해 스타일을 꾸며줌. */
+.card .swiper-slide {
+    background-color: #fff;
+    transform: scale(0.5);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card .swiper-slide-prev,
+.card .swiper-slide-next {
+    transform: scale(1.5);
+    z-index: 5;
+}
+
+.card .swiper-slide-active {
+    transform: scale(2);
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+
+
+/*불릿모양. swiper-pagination-bullet-active 클래스가 현재 색상이 들어간 부분 나타냄*/
+.swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 4px;
+    background:#3d3832 !important;
+}
+
+@media(max-width:1100px) {
+    #news {
+        width: 100%;
+    }
+}
+
+@media(max-width:599px) {
+    #news {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: block;
+    }
+}
